@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Messages</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <div class="header">
+      <span class="title">Fetch Messages</span>
+    </div>
+    <div class="main-div">
+      <span class="title">Login</span>
+      <input id="mobile-input" type="tel" placeholder="Mobile Number">
+      <!-- Register Form-->
+      <div class="main-div" style="display: none;">
+      <span id="CreatePassword"><h2>CreatePassword !!</h2></span>
+      <input id="register-input-name" type="text" placeholder="Full Name">
+      <input id="register-password-1"  type="password" placeholder="Password">
+      <input id="register-password-2"  type="password" placeholder="Enter the Same Password">
+      </div>
+      <!--Login Form-->
+      <input id="password-input" type="password" style="display: none;"  placeholder="Password">
+      <span id="wrongPassword" style="color: red; display: none;">wrongPassword !!</span>
+      <!--Submit Buttom-->
+      <button id="Uni-Button" class="login-button">Check User</button>
+      </div>
+      <ul style="display: none;">
+        <li>
+            <img src="oval.svg" width="40" alt="">
+        </li>
+      </ul>
+
+      <div class="scroll-view" style="display: none;">
+        <div class="header">
+          <span id="Welcome" class="title">Welcome, John Doe</span>
+        </div>
+        <ul id="list">
+          <!--Items Added Here -->
+          <!-- <li  data-time="10:00 AM">
+            <span> Vinay</span>
+            <p>Hi ra ela unnva !!</p>
+          </li> -->
+        </ul>
+        <button class="logout-button">Logout</button>
+        <button id ="Update-button" style="display: none;" class="logout-button">Update Profile</button>
+      </div>
+
+
+    
+    <script src="popup.js"></script>
+  </body>
+</html>
