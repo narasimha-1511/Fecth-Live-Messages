@@ -38,17 +38,24 @@ rootRef.on("value", function (snapshot) {
   // const author = data.author;
   let time = 0,message = 0,author = 0;
   let iter = data.messages;
-  
-   time  = data[iter].time;
-   message = data[iter].message;
-   author = data[iter].author;
-  console.log(time,message,author);
-  chrome.runtime.sendMessage(
-    { action: "newMessage", time : time , message : message , author : author ,data:data},
-    function (response) {
-      // Handle response if needed
-    }
-  );
+  for (i = 1; i <= iter; i++) {
+    time = data[i].time;
+    message = data[i].message;
+    author = data[i].author;
+    console.log(time, message, author);
+    chrome.runtime.sendMessage(
+      {
+        action: "newMessage",
+        time: time,
+        message: message,
+        author: author,
+        data: data,
+      },
+      function (response) {
+        // Handle response if needed
+      }
+    );
+  }
   
        
 });
